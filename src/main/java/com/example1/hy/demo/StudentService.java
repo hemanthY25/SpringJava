@@ -10,10 +10,20 @@ import org.springframework.stereotype.Service;
 public class StudentService {
     
   //  private Student student;
+ 
+    private StudentRepository studentRepository;
+  
+    // @Autowired
+    public StudentService( StudentRepository studentRepository){
+      this.studentRepository = studentRepository;
+    }
+
     @Autowired
-    public List<Student> getStudents(){
-        return List.of( 
-            new Student("student1", "student1@mail.com", LocalDate.of(2002, 01, 01))
-            );
+    public List<Student> getStudents( ){
+      //return List.of( 
+       //   new Student("student1", "student1@mail.com", LocalDate.of(2002, 01, 01))
+      //    );
+      return studentRepository.findAll();
     }
 }
+
