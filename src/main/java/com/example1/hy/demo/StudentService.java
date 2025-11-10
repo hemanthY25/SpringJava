@@ -1,0 +1,19 @@
+package com.example1.hy.demo;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentService {
+    
+  //  private Student student;
+    @Autowired
+    public List<Student> getStudents(){
+        return List.of( 
+            new Student("student1", "student1@mail.com", LocalDate.of(2002, 01, 01))
+            );
+    }
+}

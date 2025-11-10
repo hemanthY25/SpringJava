@@ -10,24 +10,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-//@Controller
-@RestController
+@Controller
+//@RestController
+@RequestMapping("/api")
 public class DemoControllers {
 
 //    @ResponseBody
    // @RequestMapping(value="/index.html", method = RequestMethod.GET)
-    @GetMapping("/index.html")
-    public String index(){
-        return "index.html";
-    }
+//    @GetMapping("/index.html")
+//    public String index(){
+ //       return "index.html";
+  //  }
 
- //   @RequestMapping(value="/home.html", method = RequestMethod.GET)
-    @GetMapping("/home.html")
+   // @RequestMapping( method = RequestMethod.GET)
+    @GetMapping()
     public String home(){
-        return "home";
+        return "home.html";
     }
 
-    @GetMapping("/printName")
+    @GetMapping("/api/printName")
 	public String RtnCompany(@RequestParam( value = "myName" , defaultValue = "Nothing" ) String name){
         Company c1 = new Company(name);
         return c1.getName();
