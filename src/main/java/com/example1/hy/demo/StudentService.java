@@ -13,12 +13,11 @@ public class StudentService {
  
     private StudentRepository studentRepository;
   
-    // @Autowired
+    @Autowired
     public StudentService( StudentRepository studentRepository){
       this.studentRepository = studentRepository;
     }
 
-    @Autowired
     public List<Student> getStudents( ){
       //return List.of( 
        //   new Student("student1", "student1@mail.com", LocalDate.of(2002, 01, 01))

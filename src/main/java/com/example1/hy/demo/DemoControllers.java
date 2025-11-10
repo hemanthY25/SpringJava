@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-//@RestController
-@RequestMapping("/api")
+//@Controller
+@RestController
+@RequestMapping("home.html")
 public class DemoControllers {
 
 //    @ResponseBody
@@ -28,11 +28,11 @@ public class DemoControllers {
         return "home.html";
     }
 
-    @GetMapping("/api/printName")
-	public String RtnCompany(@RequestParam( value = "myName" , defaultValue = "Nothing" ) String name){
-        Company c1 = new Company(name);
-        return c1.getName();
-    }
+ //   @GetMapping("/api/printName")
+//	public String RtnCompany(@RequestParam( value = "myName" , defaultValue = "Nothing" ) String name){
+ //       Company c1 = new Company(name);
+   //     return c1.getName();
+ //   }
 
   //  @RequestMapping(value="/printName", method = RequestMethod.GET)
   //  public String RtnCompany(@RequestParam("myName") String name){
