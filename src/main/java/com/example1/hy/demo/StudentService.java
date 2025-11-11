@@ -22,7 +22,7 @@ public class StudentService {
       //return List.of( 
        //   new Student("student1", "student1@mail.com", LocalDate.of(2002, 01, 01))
       //    );
-      return studentRepository.findAll();
+      return this.studentRepository.findAll();
     }
 }
 

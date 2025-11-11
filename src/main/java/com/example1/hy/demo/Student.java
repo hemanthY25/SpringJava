@@ -21,7 +21,11 @@ public class Student {
     private String email;
     private LocalDate dob;
 
-    public Student(String name, String email, LocalDate dob){
+    Student(){
+        
+    }
+
+    Student(String name, String email, LocalDate dob){
         this.name = name;
         this.email = email;
         this.dob = dob;
